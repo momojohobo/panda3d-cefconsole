@@ -12,8 +12,7 @@
     var text = document.createTextNode(repl_output);
     element = document.getElementById("repl_output");
     element.appendChild(text);
-    element.scrollTop = element.scrollHeight;
-
+    window.scrollTo(0,document.body.scrollHeight);
     document.getElementById("more").textContent = prompt
   }
 

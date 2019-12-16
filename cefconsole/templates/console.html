@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style type="text/css">
       body {
-	  background-color: #ffffff80;
+	  background-color: #00000000;
       }
 
       .subconsole_header {
@@ -46,6 +46,7 @@
       function show_subconsole(n) {
 	  hide_all_subconsoles();
 	  document.getElementById(subconsoles[n]).style.display = "block";
+    document.getElementById(subconsoles[n]).style.background = "#FFFFFF80";
       }
     </script>
   </head>
