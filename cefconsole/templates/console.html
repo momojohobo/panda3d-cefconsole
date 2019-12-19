@@ -11,34 +11,21 @@
     text-shadow : 1px 1px black;
       }
 
-      select {
+      .panel {
+    background-color : #00000050;
+    padding : 5px;
+    margin : 5px;
+    border : 2px solid black;
+    border-radius: 1px;
+      }
+
+      .panel_select {
     background-color: #00000099;
     color : white;
     border: 2px solid black;
       }
 
-      div {
-    background-color : #00000050;
-    margin : 5px;
-    padding : 5px;
-    border : 2px solid black;
-    border-radius: 1px;
-      }
-
-      .clear {
-    background-color : #00000000;
-    margin : 0px;
-    padding : 0px;
-    border : 0px;
-      }
-
-      table {
-    table-layout: fixed;
-    border-spacing: 10px;
-    border-collapse: separate;
-      }
-
-      button {
+      .panel_button {
     background-color : #00000099;
     color : white;
     border-color : black;
@@ -46,9 +33,11 @@
       }
 
       .subconsole_header {
-	  width: 100%;
-	  border-collapse: collapse;
 	  text-align: center;
+    width: 100%;
+    table-layout: fixed;
+    border-spacing: 10px;
+    border-collapse: separate;
       }
 
       .subconsole_header_cell {
@@ -59,9 +48,14 @@
     background-color: #00000099;
       }
 
+      .subconsole {
+    background-color : #00000050;
+    padding : 5px;
+      }
+
       .fullwidth_table {
-	  width: 100%;
 	  overflow-x: auto;
+
       }
 
       #repl_input {
@@ -95,17 +89,14 @@
       <table class="subconsole_header fullwidth_table">
 	<tr>
 	  {% for subconsole in subconsoles %}
-	  <td
-      class="subconsole_header_cell"
-      onclick="show_subconsole({{ loop.index0 }});"
-    > {{ subconsole.name }} </td>
+	  <td class="subconsole_header_cell" onclick="show_subconsole({{ loop.index0 }});"> {{ subconsole.name }} </td>
 	  {% endfor %}
 	</tr>
       </table>
     </div>
     <div id="subconsole_container" class="clear">
       {% for subconsole in subconsoles %}
-      <div id="{{ subconsole.name }}" class="clear">
+      <div id="{{ subconsole.name }}" class="subconsole">
 	{% include subconsole|subconsolehtmlpath %}
       </div>
       {% endfor %}
