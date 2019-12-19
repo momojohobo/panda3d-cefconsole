@@ -13,8 +13,8 @@
 
       .panel {
     background-color : #00000050;
-    padding : 5px;
     margin : 5px;
+    padding : 5px;
     border : 2px solid black;
     border-radius: 1px;
       }
@@ -33,11 +33,9 @@
       }
 
       .subconsole_header {
+	  width: 100%;
+	  border-collapse: collapse;
 	  text-align: center;
-    width: 100%;
-    table-layout: fixed;
-    border-spacing: 10px;
-    border-collapse: separate;
       }
 
       .subconsole_header_cell {
@@ -49,13 +47,16 @@
       }
 
       .subconsole {
-    background-color : #00000050;
     padding : 5px;
+    background-color : #00000050;
       }
 
       .fullwidth_table {
+	  width: 100%;
 	  overflow-x: auto;
-
+    table-layout: fixed;
+    border-spacing: 10px;
+    border-collapse: separate;
       }
 
       #repl_input {
