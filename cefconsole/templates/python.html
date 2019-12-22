@@ -1,3 +1,14 @@
+<head>
+  <style type="text/css">
+
+    #repl_input {
+  background-color: #00000000;
+  border: #00000000;
+  outline: none;
+    }
+
+  </style>
+</head>
 <script>
   var input_history = [];
   var history_index = 0;
@@ -13,7 +24,7 @@
     element = document.getElementById("repl_output");
     element.appendChild(text);
     window.scrollTo(0,document.body.scrollHeight);
-    document.getElementById("more").textContent = prompt
+    document.getElementById("more").textContent = prompst
   }
 
   function set_input_history() {
@@ -62,6 +73,6 @@
   <p id="repl_output" style="white-space: pre-wrap; overflow:auto">
 Please click next to the >>> at the bottom of this page to start until we figure out a way to autofocus it.
   </p>
-  <span id=more> >>>  </span>
-  <input type="text" id="repl_input"></input>
+  <span id=more> >>> </span>
+  <input id="repl_input" class="panel_input" type="text"></input>
 </div>
